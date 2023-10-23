@@ -1,2 +1,2 @@
 # nsremgr
-Nessus report manager is an automation script that build with google script to manage the every report from Nessus vulnerability scanner.
+Nessus report manager is an automation script that build with google script to manage every report that exported from Nessus vulnerability scanner.
