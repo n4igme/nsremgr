@@ -1,8 +1,10 @@
-var spreadsheetUrl = "https://docs.google.com/spreadsheets/d/1wWgvjlAJsrVi_vXEnSZxc_JMmqewcFP9Z6HTUmaWiTg/edit";
-var ss = SpreadsheetApp.openByUrl(spreadsheetUrl);
+var sstatus = "https://docs.google.com/spreadsheets/d/1jEm329I6Yqwn-h-aHfniR8iyrkchRvB_SrdLcSC3tWo/edit";
+var supdate = "https://docs.google.com/spreadsheets/d/1wWgvjlAJsrVi_vXEnSZxc_JMmqewcFP9Z6HTUmaWiTg/edit";
+var ss = SpreadsheetApp.openByUrl(sstatus);
+var su = SpreadsheetApp.openByUrl(supdate);
 var hostList = ss.getSheetByName("Host Summary");
 var baseline = ss.getSheetByName("Vulnerability List");
-var newReport = ss.getSheetByName("Report_13/10/2023");
+var newReport = su.getSheetByName("Report_13/10/2023");
 var reportDate = "13 Oct 2023";
 
 // Assuming your data starts from the second row (header in the first row)
@@ -120,7 +122,7 @@ function getEnv(ipaddress) {
 }
 
 function targetDate(initiateDate, severity) {
-  var currentDate = new Date();
+  //var currentDate = new Date();
   var targetDate;
 
   //Vulnerability treatment based on the SLA in each company
@@ -131,7 +133,7 @@ function targetDate(initiateDate, severity) {
     case "Low" : targetDate=90;break;
   }
   var calculatedDate = new Date(initiateDate);
-  calculatedDate.setDate(currentDate.getDate() + targetDate);
+  calculatedDate.setDate(calculatedDate.getDate() + targetDate);
   var resultDate = Utilities.formatDate(calculatedDate, Session.getScriptTimeZone(), "dd MM yyyy");
   return resultDate;
 }
