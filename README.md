@@ -5,4 +5,4 @@ Nessus report manager is an automation script that build with google script to m
 [<img src="https://img.youtube.com/vi/1nkbTH1o-3I/hqdefault.jpg" width="425" height="300"/>](https://www.youtube.com/embed/1nkbTH1o-3I)
 
 # Credit to
-[https://github.com/suryadina](Ardya)
+[Ardya Suryadina](https://github.com/suryadina)
