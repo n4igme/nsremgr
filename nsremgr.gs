@@ -4,8 +4,8 @@ var ss = SpreadsheetApp.openByUrl(sstatus);
 var su = SpreadsheetApp.openByUrl(supdate);
 var hostList = ss.getSheetByName("Host Summary");
 var baseline = ss.getSheetByName("Vulnerability List");
-var newReport = su.getSheetByName("Report_13/10/2023");
-var reportDate = "13 Oct 2023";
+var newReport = su.getSheetByName("20/11/2023");
+var reportDate = "20 Nov 2023";
 
 // Assuming your data starts from the second row (header in the first row)
 var ss1 = baseline.getRange(2, 1, baseline.getLastRow(), baseline.getLastColumn()).getValues();
