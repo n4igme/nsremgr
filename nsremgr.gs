@@ -35,10 +35,13 @@ function updateData() {
     
     if (!foundInSS2) {
       baseline.getRange(i+1, 1).setValue("Closed");
-      baseline.getRange(i+1, 5).setValue(reportDate);
+      if (baseline.getRange(i+1, 5).getValue()==="") {
+        baseline.getRange(i+1, 5).setValue(reportDate);
+      }
     }
     else {
       baseline.getRange(i+1, 1).setValue("Open");
+      baseline.getRange(i+1, 5).setValue("");
     }
 
     var plan = baseline.getRange(i+1, 3).getValue();
